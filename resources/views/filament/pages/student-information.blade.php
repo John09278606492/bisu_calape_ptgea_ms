@@ -132,56 +132,51 @@
             @else
                 @php
                     $totalCollections = 0;
-                    $totalYearLevelPayments = 0;
-                    $totalPays = 0;
-                    $allFees = collect();
+$totalYearLevelPayments = 0;
+$totalPays = 0;
+$allFees = collect();
+$totalPaid = 0;
+$totalUnpaid = 0;
 
-                    foreach ($payments as $enrollment) {
-                        $schoolYear = $enrollment->schoolyear->schoolyear;
+foreach ($payments as $enrollment) {
+    $schoolYear = $enrollment->schoolyear->schoolyear;
 
-                        foreach ($enrollment->yearlevelpayments as $fee) {
-                            $allFees->push([
-                                'type' => 'Year Level Fee',
-                                'description' => $fee->description . ' - Year Level ' . $fee->yearlevel->yearlevel,
-                                'amount' => $fee->amount,
-                                'schoolyear' => $schoolYear
-                            ]);
-                            $totalYearLevelPayments += $fee->amount;
-                        }
+    foreach ($enrollment->yearlevelpayments as $fee) {
+        $allFees->push([
+            'type' => 'Year Level Fee',
+            'description' => $fee->description . ' - Year Level ' . $fee->yearlevel->yearlevel,
+            'amount' => $fee->amount,
+            'schoolyear' => $schoolYear
+        ]);
+        $totalYearLevelPayments += $fee->amount;
+    }
 
-                        $totalPaid = 0;
-                        $totalUnpaid = 0;
-                        $totalCollections = 0;
+    foreach ($enrollment->collections as $fee) {
+        $allFees->push([
+            'type' => 'School Year Fee',
+            'description' => $fee->description . ' - Semester ' . optional($fee->semester)->semester,
+            'amount' => $fee->amount,
+            'collection_status' => $fee->pivot->collection_status ?? 'unpaid',
+            'schoolyear' => $schoolYear
+        ]);
 
-                        foreach ($enrollment->collections as $fee) {
-                            // Push the fee data into the collection
-                            $allFees->push([
-                                'type' => 'School Year Fee',
-                                'description' => $fee->description . ' - Semester ' . optional($fee->semester)->semester,
-                                'amount' => $fee->amount,
-                                'collection_status' => $fee->pivot->collection_status ?? 'unpaid', // Default if null
-                                'schoolyear' => $schoolYear
-                            ]);
+        $totalCollections += $fee->amount;
 
-                            // Accumulate the total collection amount
-                            $totalCollections += $fee->amount;
+        if ($fee->pivot->collection_status === 'paid') {
+            $totalPaid += $fee->amount;
+        } else {
+            $totalUnpaid += $fee->amount;
+        }
+    }
 
-                            // Calculate totalPaid and totalUnpaid based on collection status
-                            if ($fee->pivot->collection_status === 'paid') {
-                                $totalPaid += $fee->amount;
-                            } else {
-                                $totalUnpaid += $fee->amount;
-                            }
-                        }
+    $totalPays += $enrollment->pays
+        ->where('status1', 'paid')
+        ->sum('amount')
+        - $enrollment->pays
+        ->where('status1', 'refunded')
+        ->sum('amount');
+}
 
-
-                        $totalPays += $enrollment->pays
-                            ->where('status1', 'paid')
-                            ->sum('amount')
-                            - $enrollment->pays
-                            ->where('status1', 'refunded')
-                            ->sum('amount');
-                    }
 
                     $groupedFees = $allFees->groupBy('schoolyear');
                     $remainingBalance = ($totalCollections + $totalYearLevelPayments) - $totalPays;

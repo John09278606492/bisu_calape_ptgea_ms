@@ -32,7 +32,8 @@
 
         $totalPaid = 0;
         $totalUnpaid = 0;
-        $totalCollections = 0;
+        // This line was moved to the top, so we comment it here to avoid reset
+        // $totalCollections = 0;
 
         foreach ($enrollment->collections as $fee) {
             // Push the fee data into the collection
@@ -59,6 +60,7 @@
     $groupedFees = $allFees->groupBy('schoolyear');
     $remainingBalance = ($totalCollections + $totalYearLevelPayments) - $totalPays;
 @endphp
+
 <div style="padding: 10px; background-color: white; font-family: 'DejaVu Sans', sans-serif; font-size: 12px;">
     <h1 style="text-align: right; font-size: 16px; margin-bottom: 10px;">INVOICE</h1>
     <p style="margin-bottom: 0.25rem; text-align: right; font-size: 15px; line-height: 0.5;">BISU Calape PTGEA MS</p>

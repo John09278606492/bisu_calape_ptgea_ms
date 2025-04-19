@@ -327,9 +327,9 @@ class EnrollmentResource extends Resource
                 Tables\Columns\TextColumn::make('schoolyear.schoolyear')
                     ->numeric()
                     ->sortable(),
-                // Tables\Columns\TextColumn::make('semesters.semester')
-                //     ->numeric()
-                //     ->sortable(),
+                Tables\Columns\TextColumn::make('semesters.semester')
+                    ->numeric()
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('payments')
                     ->label('Total Amount Paid')
                     ->badge()
@@ -407,7 +407,7 @@ class EnrollmentResource extends Resource
                             }),
                         // Select::make('semester_id')
                         //     ->label('Semester')
-                        //     ->multiple()
+                        //     // ->multiple()
                         //     ->options(fn(Get $get) => Semester::query()
                         //         ->where('schoolyear_id', $get('schoolyear_id'))
                         //         ->pluck('semester', 'id'))

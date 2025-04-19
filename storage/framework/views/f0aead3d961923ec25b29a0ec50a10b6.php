@@ -1,0 +1,2 @@
+<?php echo $__env->make("reusable.invoices.new_print_invoices", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+<?php /**PATH C:\laragon\www\public_html - Copy (2)\resources\views/pdf/new_print_invoices.blade.php ENDPATH**/ ?>

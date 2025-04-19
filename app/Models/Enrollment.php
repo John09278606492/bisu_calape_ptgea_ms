@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Facades\Log;
 
 class Enrollment extends Model
 {
@@ -118,7 +119,10 @@ class Enrollment extends Model
 
     public function getBalanceAttribute(): string
     {
-        $collectionsTotal = $this->collections()->sum('amount');
+        $collectionsTotal = $this->collections()
+            // ->where('semester_id', 2)
+            ->sum('collections.amount');
+
         $yearlevelPaymentsTotal = $this->yearlevelpayments()->sum('amount');
         $amountPaid = $this->pays()->where('status1', 'paid')->sum('amount');
         $amountRefunded = $this->pays()->where('status1', 'refunded')->sum('amount');
