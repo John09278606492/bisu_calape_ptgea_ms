@@ -73,7 +73,7 @@
         @endif
     </div>
 
-    <div style="margin-bottom: 10px;">
+    <div>
         <h2 style="font-size: 14px; margin-bottom: 5px;">Fees Summary</h2>
         <table style="width: 100%; border-collapse: collapse; font-size: 12px;">
             <thead>
@@ -121,8 +121,6 @@
             </div>
         </div>
     </div>
-
-
 
     <div>
         <h2 style="font-size: 14px; margin-bottom: 5px;">Payment History</h2>

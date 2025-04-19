@@ -1,6 +1,6 @@
 <style>
     @page {
-        size: 350px auto; /* Set the width to match your container width */
+        size: 89mm auto; /* Set the width to match your container width */
         margin: 0; /* Remove default margins for a snug fit */
     }
     body {
@@ -73,7 +73,7 @@
         <?php endif; ?>
     </div>
 
-    <div style="margin-bottom: 10px;">
+    <div>
         <h2 style="font-size: 14px; margin-bottom: 5px;">Fees Summary</h2>
         <table style="width: 100%; border-collapse: collapse; font-size: 12px;">
             <thead>
@@ -124,8 +124,6 @@
             </div>
         </div>
     </div>
-
-
 
     <div>
         <h2 style="font-size: 14px; margin-bottom: 5px;">Payment History</h2>

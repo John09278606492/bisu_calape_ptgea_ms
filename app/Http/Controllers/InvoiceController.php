@@ -126,7 +126,7 @@ class InvoiceController extends Controller
             // ]);
 
             // Define custom paper size (e.g., 5x5 inches)
-            $customPaper = [0, 0, 300, 600];
+            $customPaper = [0, 0, 200, 500];
 
             // Generate the PDF with a custom paper size
             $pdf = Pdf::loadView('pdf.new_print_invoices', ['payments' => $this->payments])
