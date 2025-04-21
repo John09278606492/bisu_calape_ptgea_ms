@@ -1,6 +1,6 @@
 <style>
     @page {
-        size: 89mm auto; /* Set the width to match your container width */
+        size: 350px auto; /* Set the width to match your container width */
         margin: 0; /* Remove default margins for a snug fit */
     }
     body {
