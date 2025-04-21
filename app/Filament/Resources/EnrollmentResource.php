@@ -327,9 +327,9 @@ class EnrollmentResource extends Resource
                 Tables\Columns\TextColumn::make('schoolyear.schoolyear')
                     ->numeric()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('semesters.semester')
-                    ->numeric()
-                    ->sortable(),
+                // Tables\Columns\TextColumn::make('semesters.semester')
+                //     ->numeric()
+                //     ->sortable(),
                 Tables\Columns\TextColumn::make('payments')
                     ->label('Total Amount Paid')
                     ->badge()
