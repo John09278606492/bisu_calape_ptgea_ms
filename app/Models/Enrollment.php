@@ -134,7 +134,7 @@ class Enrollment extends Model
 
         $balance = ($collectionsTotal + $yearlevelPaymentsTotal) - $totalAmount;
 
-        return number_format($balance, 2);
+        return round($balance, 2);
     }
 
     public function getRefundableAmountAttribute(): string
@@ -187,7 +187,7 @@ class Enrollment extends Model
             return 'No Payments';
         }
 
-        return number_format($collectionsTotal, 2);
+        return round($collectionsTotal, 2);
     }
 
     public static function summarizeAmounts(?int $schoolYearId): string
