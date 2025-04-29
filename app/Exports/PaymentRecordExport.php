@@ -103,7 +103,7 @@ class PaymentRecordExport implements
     public function headings(): array
     {
         return [
-            '#',
+            'No.',
             'Complete Name',
             'College',
             'Program',
@@ -238,6 +238,21 @@ class PaymentRecordExport implements
                     ],
                 ]);
 
+                // Calculate Net Amount (Paid - Refunded)
+                $netAmountRow = $totalAmountRefunded + 1; // New row after refunded
+                $netAmount = $this->totalPayments - $this->totalRefunded;
+
+                // Add Net Amount
+                $sheet->setCellValue("H{$netAmountRow}", 'Net Amount (Paid - Refunded):');
+                $sheet->setCellValue("I{$netAmountRow}", number_format($netAmount, 2));
+
+                // Apply bold and right alignment for Net Amount
+                $sheet->getStyle("H{$netAmountRow}:I{$netAmountRow}")->applyFromArray([
+                    'font' => ['bold' => true],
+                    'alignment' => [
+                        'horizontal' => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_RIGHT
+                    ],
+                ]);
 
                 // Make summary rows bold
                 $sheet->getStyle("H{$totalAmountRefunded}:I{$totalAmountRefunded}")->getFont()->setBold(true);

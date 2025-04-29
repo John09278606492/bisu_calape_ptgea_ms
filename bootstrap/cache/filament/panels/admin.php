@@ -1,6 +1,10 @@
 <?php return array (
   'livewireComponents' => 
   array (
+    'app.filament.resources.collection-enrollment-resource.pages.create-collection-enrollment' => 'App\\Filament\\Resources\\CollectionEnrollmentResource\\Pages\\CreateCollectionEnrollment',
+    'app.filament.resources.collection-enrollment-resource.pages.edit-collection-enrollment' => 'App\\Filament\\Resources\\CollectionEnrollmentResource\\Pages\\EditCollectionEnrollment',
+    'app.filament.resources.collection-enrollment-resource.pages.list-collection-enrollments' => 'App\\Filament\\Resources\\CollectionEnrollmentResource\\Pages\\ListCollectionEnrollments',
+    'app.filament.resources.collection-enrollment-resource.widgets.collection-records-widget' => 'App\\Filament\\Resources\\CollectionEnrollmentResource\\Widgets\\CollectionRecordsWidget',
     'app.filament.resources.college-resource.pages.create-college' => 'App\\Filament\\Resources\\CollegeResource\\Pages\\CreateCollege',
     'app.filament.resources.college-resource.pages.edit-college' => 'App\\Filament\\Resources\\CollegeResource\\Pages\\EditCollege',
     'app.filament.resources.college-resource.pages.list-colleges' => 'App\\Filament\\Resources\\CollegeResource\\Pages\\ListColleges',
@@ -15,6 +19,7 @@
     'app.filament.resources.pay-resource.pages.create-pay' => 'App\\Filament\\Resources\\PayResource\\Pages\\CreatePay',
     'app.filament.resources.pay-resource.pages.edit-pay' => 'App\\Filament\\Resources\\PayResource\\Pages\\EditPay',
     'app.filament.resources.pay-resource.pages.list-pays' => 'App\\Filament\\Resources\\PayResource\\Pages\\ListPays',
+    'app.filament.resources.pay-resource.widgets.pays-widget' => 'App\\Filament\\Resources\\PayResource\\Widgets\\PaysWidget',
     'app.filament.resources.program-resource.pages.create-program' => 'App\\Filament\\Resources\\ProgramResource\\Pages\\CreateProgram',
     'app.filament.resources.program-resource.pages.edit-program' => 'App\\Filament\\Resources\\ProgramResource\\Pages\\EditProgram',
     'app.filament.resources.program-resource.pages.list-programs' => 'App\\Filament\\Resources\\ProgramResource\\Pages\\ListPrograms',
@@ -70,12 +75,12 @@
   ),
   'pages' => 
   array (
-    '/home/u455991246/domains/darkblue-sardine-600071.hostingersite.com/public_html/app/Filament/Pages/Dashboard.php' => 'App\\Filament\\Pages\\Dashboard',
-    '/home/u455991246/domains/darkblue-sardine-600071.hostingersite.com/public_html/app/Filament/Pages/StudentInformation.php' => 'App\\Filament\\Pages\\StudentInformation',
+    'C:\\laragon\\www\\public_html - Copy (2)\\app\\Filament\\Pages\\Dashboard.php' => 'App\\Filament\\Pages\\Dashboard',
+    'C:\\laragon\\www\\public_html - Copy (2)\\app\\Filament\\Pages\\StudentInformation.php' => 'App\\Filament\\Pages\\StudentInformation',
   ),
   'pageDirectories' => 
   array (
-    0 => '/home/u455991246/domains/darkblue-sardine-600071.hostingersite.com/public_html/app/Filament/Pages',
+    0 => 'C:\\laragon\\www\\public_html - Copy (2)\\app\\Filament/Pages',
   ),
   'pageNamespaces' => 
   array (
@@ -83,19 +88,20 @@
   ),
   'resources' => 
   array (
-    '/home/u455991246/domains/darkblue-sardine-600071.hostingersite.com/public_html/app/Filament/Resources/CollegeResource.php' => 'App\\Filament\\Resources\\CollegeResource',
-    '/home/u455991246/domains/darkblue-sardine-600071.hostingersite.com/public_html/app/Filament/Resources/EnrollmentResource.php' => 'App\\Filament\\Resources\\EnrollmentResource',
-    '/home/u455991246/domains/darkblue-sardine-600071.hostingersite.com/public_html/app/Filament/Resources/PayResource.php' => 'App\\Filament\\Resources\\PayResource',
-    '/home/u455991246/domains/darkblue-sardine-600071.hostingersite.com/public_html/app/Filament/Resources/ProgramResource.php' => 'App\\Filament\\Resources\\ProgramResource',
-    '/home/u455991246/domains/darkblue-sardine-600071.hostingersite.com/public_html/app/Filament/Resources/SchoolyearResource.php' => 'App\\Filament\\Resources\\SchoolyearResource',
-    '/home/u455991246/domains/darkblue-sardine-600071.hostingersite.com/public_html/app/Filament/Resources/StudResource.php' => 'App\\Filament\\Resources\\StudResource',
-    '/home/u455991246/domains/darkblue-sardine-600071.hostingersite.com/public_html/app/Filament/Resources/StudentResource.php' => 'App\\Filament\\Resources\\StudentResource',
-    '/home/u455991246/domains/darkblue-sardine-600071.hostingersite.com/public_html/app/Filament/Resources/UserResource.php' => 'App\\Filament\\Resources\\UserResource',
-    '/home/u455991246/domains/darkblue-sardine-600071.hostingersite.com/public_html/app/Filament/Resources/YearlevelResource.php' => 'App\\Filament\\Resources\\YearlevelResource',
+    'C:\\laragon\\www\\public_html - Copy (2)\\app\\Filament\\Resources\\CollectionEnrollmentResource.php' => 'App\\Filament\\Resources\\CollectionEnrollmentResource',
+    'C:\\laragon\\www\\public_html - Copy (2)\\app\\Filament\\Resources\\CollegeResource.php' => 'App\\Filament\\Resources\\CollegeResource',
+    'C:\\laragon\\www\\public_html - Copy (2)\\app\\Filament\\Resources\\EnrollmentResource.php' => 'App\\Filament\\Resources\\EnrollmentResource',
+    'C:\\laragon\\www\\public_html - Copy (2)\\app\\Filament\\Resources\\PayResource.php' => 'App\\Filament\\Resources\\PayResource',
+    'C:\\laragon\\www\\public_html - Copy (2)\\app\\Filament\\Resources\\ProgramResource.php' => 'App\\Filament\\Resources\\ProgramResource',
+    'C:\\laragon\\www\\public_html - Copy (2)\\app\\Filament\\Resources\\SchoolyearResource.php' => 'App\\Filament\\Resources\\SchoolyearResource',
+    'C:\\laragon\\www\\public_html - Copy (2)\\app\\Filament\\Resources\\StudResource.php' => 'App\\Filament\\Resources\\StudResource',
+    'C:\\laragon\\www\\public_html - Copy (2)\\app\\Filament\\Resources\\StudentResource.php' => 'App\\Filament\\Resources\\StudentResource',
+    'C:\\laragon\\www\\public_html - Copy (2)\\app\\Filament\\Resources\\UserResource.php' => 'App\\Filament\\Resources\\UserResource',
+    'C:\\laragon\\www\\public_html - Copy (2)\\app\\Filament\\Resources\\YearlevelResource.php' => 'App\\Filament\\Resources\\YearlevelResource',
   ),
   'resourceDirectories' => 
   array (
-    0 => '/home/u455991246/domains/darkblue-sardine-600071.hostingersite.com/public_html/app/Filament/Resources',
+    0 => 'C:\\laragon\\www\\public_html - Copy (2)\\app\\Filament/Resources',
   ),
   'resourceNamespaces' => 
   array (
@@ -103,11 +109,11 @@
   ),
   'widgets' => 
   array (
-    '/home/u455991246/domains/darkblue-sardine-600071.hostingersite.com/public_html/app/Filament/Widgets/AdminWidget.php' => 'App\\Filament\\Widgets\\AdminWidget',
-    '/home/u455991246/domains/darkblue-sardine-600071.hostingersite.com/public_html/app/Filament/Widgets/BigStats.php' => 'App\\Filament\\Widgets\\BigStats',
-    '/home/u455991246/domains/darkblue-sardine-600071.hostingersite.com/public_html/app/Filament/Widgets/CauditWidget.php' => 'App\\Filament\\Widgets\\CauditWidget',
-    '/home/u455991246/domains/darkblue-sardine-600071.hostingersite.com/public_html/app/Filament/Widgets/CollegeWidget.php' => 'App\\Filament\\Widgets\\CollegeWidget',
-    '/home/u455991246/domains/darkblue-sardine-600071.hostingersite.com/public_html/app/Filament/Widgets/ProgramWidget.php' => 'App\\Filament\\Widgets\\ProgramWidget',
+    'C:\\laragon\\www\\public_html - Copy (2)\\app\\Filament\\Widgets\\AdminWidget.php' => 'App\\Filament\\Widgets\\AdminWidget',
+    'C:\\laragon\\www\\public_html - Copy (2)\\app\\Filament\\Widgets\\BigStats.php' => 'App\\Filament\\Widgets\\BigStats',
+    'C:\\laragon\\www\\public_html - Copy (2)\\app\\Filament\\Widgets\\CauditWidget.php' => 'App\\Filament\\Widgets\\CauditWidget',
+    'C:\\laragon\\www\\public_html - Copy (2)\\app\\Filament\\Widgets\\CollegeWidget.php' => 'App\\Filament\\Widgets\\CollegeWidget',
+    'C:\\laragon\\www\\public_html - Copy (2)\\app\\Filament\\Widgets\\ProgramWidget.php' => 'App\\Filament\\Widgets\\ProgramWidget',
     0 => 'App\\Filament\\Widgets\\AdminWidget',
     1 => 'App\\Filament\\Widgets\\BigStats',
     2 => 'App\\Filament\\Widgets\\CauditWidget',
@@ -116,7 +122,7 @@
   ),
   'widgetDirectories' => 
   array (
-    0 => '/home/u455991246/domains/darkblue-sardine-600071.hostingersite.com/public_html/app/Filament/Widgets',
+    0 => 'C:\\laragon\\www\\public_html - Copy (2)\\app\\Filament/Widgets',
   ),
   'widgetNamespaces' => 
   array (

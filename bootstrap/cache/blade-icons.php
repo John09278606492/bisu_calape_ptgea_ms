@@ -1,7 +1,7 @@
 <?php return array (
   'heroicons' => 
   array (
-    '/home/u455991246/domains/darkblue-sardine-600071.hostingersite.com/public_html/vendor/blade-ui-kit/blade-heroicons/src/../resources/svg' => 
+    'C:\\laragon\\www\\public_html - Copy (2)\\vendor\\blade-ui-kit\\blade-heroicons\\src/../resources/svg' => 
     array (
       0 => 'c-academic-cap',
       1 => 'c-adjustments-horizontal',
@@ -1296,7 +1296,7 @@
   ),
   'fontawesome-brands' => 
   array (
-    '/home/u455991246/domains/darkblue-sardine-600071.hostingersite.com/public_html/vendor/owenvoke/blade-fontawesome/src/../resources/svg/brands' => 
+    'C:\\laragon\\www\\public_html - Copy (2)\\vendor\\owenvoke\\blade-fontawesome\\src/../resources/svg/brands' => 
     array (
       0 => '42-group',
       1 => '500px',
@@ -1831,7 +1831,7 @@
   ),
   'fontawesome-regular' => 
   array (
-    '/home/u455991246/domains/darkblue-sardine-600071.hostingersite.com/public_html/vendor/owenvoke/blade-fontawesome/src/../resources/svg/regular' => 
+    'C:\\laragon\\www\\public_html - Copy (2)\\vendor\\owenvoke\\blade-fontawesome\\src/../resources/svg/regular' => 
     array (
       0 => 'address-book',
       1 => 'address-card',
@@ -2073,7 +2073,7 @@
   ),
   'fontawesome-solid' => 
   array (
-    '/home/u455991246/domains/darkblue-sardine-600071.hostingersite.com/public_html/vendor/owenvoke/blade-fontawesome/src/../resources/svg/solid' => 
+    'C:\\laragon\\www\\public_html - Copy (2)\\vendor\\owenvoke\\blade-fontawesome\\src/../resources/svg/solid' => 
     array (
       0 => '0',
       1 => '1',

@@ -129,7 +129,7 @@ class StudentpaymentExport implements WithMapping, WithHeadings, ShouldAutoSize,
     public function headings(): array
     {
         return [
-            '#',
+            'No.',
             'Student IDN',
             'Complete Name',
             'College',

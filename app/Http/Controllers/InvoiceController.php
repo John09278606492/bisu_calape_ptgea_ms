@@ -57,20 +57,20 @@ class InvoiceController extends Controller
             $html = view('pdf.print_invoice', compact('payments', 'siblingsInformation'))->render();
             $html = mb_convert_encoding($html, 'UTF-8', 'UTF-8');
 
-            $customPaper = [0, 0, 200, 500];
+            $customPaper = [0, 0, 200, 1000];
 
             // Generate the PDF with valid page size
             $pdf = Pdf::loadHTML($html)
                 // ->setPaper('A4') // or use ->setOption('page-width', '80mm')->setOption('page-height', '150mm')
                 ->setPaper($customPaper)
-                ->setOption('page-width', '80mm')
-                ->setOption('page-height', '150mm')
-                ->setOptions([
-                    'margin-top'    => 0,
-                    'margin-right'  => 0,
-                    'margin-bottom' => 0,
-                    'margin-left'   => 0,
-                ])
+                // ->setOption('page-width', '80mm')
+                // ->setOption('page-height', '150mm')
+                // ->setOptions([
+                //     'margin-top'    => 0,
+                //     'margin-right'  => 0,
+                //     'margin-bottom' => 0,
+                //     'margin-left'   => 0,
+                // ])
                 ->setOption('encoding', 'UTF-8');
 
             // Stream the generated PDF

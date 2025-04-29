@@ -53,7 +53,7 @@ class AllStudentExport implements FromCollection, WithMapping, WithHeadings, Sho
     public function headings(): array
     {
         return [
-            '#',
+            'No.',
             'Complete Name',
             'College',
             'Program',

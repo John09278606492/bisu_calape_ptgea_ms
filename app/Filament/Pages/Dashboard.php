@@ -18,6 +18,8 @@ class Dashboard extends \Filament\Pages\Dashboard
     use HasFiltersForm;
 
     protected ?string $maxContentWidth = 'full';
+    
+    protected static ?int $navigationSort = 1;
 
     public static function shouldRegisterNavigation(): bool
     {

@@ -72,6 +72,7 @@ class CauditWidget extends BaseWidget
                     ),
 
             ])
+            ->pluralModelLabel('Pages')
             ->filters([
                 Filter::make('collection_filter')
                     ->form([

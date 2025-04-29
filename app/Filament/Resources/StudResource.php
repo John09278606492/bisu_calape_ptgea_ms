@@ -39,11 +39,13 @@ class StudResource extends Resource
 {
     protected static ?string $model = Stud::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-user-group';
+    protected static ?string $navigationIcon = 'heroicon-m-user-group';
 
     protected static ?string $breadcrumb = 'Student Information';
 
     protected static ?string $navigationLabel = 'Student Information';
+
+    protected static ?int $navigationSort = 5;
 
     public static function form(Form $form): Form
     {

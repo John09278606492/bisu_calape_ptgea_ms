@@ -47,11 +47,13 @@ class EnrollmentResource extends Resource
 {
     protected static ?string $model = Enrollment::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-banknotes';
+    protected static ?string $navigationIcon = 'heroicon-m-banknotes';
 
     protected static ?string $breadcrumb = 'Student Payments';
 
     protected static ?string $navigationLabel = 'Student Payments';
+
+    protected static ?int $navigationSort = 2;
 
     public $record;
 
@@ -292,7 +294,7 @@ class EnrollmentResource extends Resource
 
         return $table
             ->columns([
-                TextColumn::make('#')->state(
+                TextColumn::make('No')->state(
                     static function (HasTable $livewire, stdClass $rowLoop): string {
                         return (string) (
                             $rowLoop->iteration +

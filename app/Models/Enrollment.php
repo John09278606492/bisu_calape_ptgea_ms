@@ -56,8 +56,8 @@ class Enrollment extends Model
     public function collections(): BelongsToMany
     {
         return $this->belongsToMany(Collection::class, 'collection_enrollment')
-            ->withTimestamps()
-            ->withPivot('collection_status');
+            // ->withTimestamps()
+            ->withPivot(['collection_status', 'updated_at']);
     }
 
     public function yearlevelpayments(): BelongsToMany
