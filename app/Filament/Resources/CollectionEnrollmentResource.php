@@ -65,10 +65,18 @@ class CollectionEnrollmentResource extends Resource
                         );
                     }
                 ),
-                Tables\Columns\TextColumn::make('enrollment.stud.fullname')
-                    ->label('Student Name')
+                Tables\Columns\TextColumn::make('enrollment.stud.studentidn')
+                    ->label('Student IDN')
                     ->searchable()
                     ->sortable(),
+                Tables\Columns\TextColumn::make('enrollment.stud.fullname')
+                    ->label('Student Name')
+                    ->sortable(['lastname', 'firstname', 'middlename'])
+                    ->searchable([
+                        'lastname',
+                        'firstname',
+                        'middlename',
+                    ]),
                 Tables\Columns\TextColumn::make('enrollment.college.college')
                     ->label('College')
                     ->searchable()
